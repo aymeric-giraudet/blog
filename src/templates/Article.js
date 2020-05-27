@@ -11,8 +11,11 @@ const Article = ({ data: { contentfulBlogPost: post } }) => (
       title={post.title}
       description={post.description.description}
       meta={[
-        { property: "og:image", content: post.heroImage.resize.src },
-        { property: "twitter:image", content: post.heroImage.resize.src },
+        { property: "og:image", content: `https:${post.heroImage.resize.src}` },
+        {
+          property: "twitter:image",
+          content: `https:${post.heroImage.resize.src}`,
+        },
       ]}
     />
     <Img
