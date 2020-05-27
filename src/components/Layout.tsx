@@ -17,7 +17,7 @@ const Layout: React.FC = ({ children }) => {
   return (
     <>
       <Header siteTitle={data.site.siteMetadata.title} />
-      <main>{children}</main>
+      <main className="bg-gray-200">{children}</main>
       <footer className='w-full text-center border-t border-grey p-4 pin-b'>
         © {new Date().getFullYear()}, Aymeric Giraudet
       </footer>

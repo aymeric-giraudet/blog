@@ -1,3 +1,5 @@
+require("dotenv").config()
+
 const resolveConfig = require("tailwindcss/resolveConfig")
 const tailwindConfig = require("./tailwind.config.js")
 
@@ -5,9 +7,9 @@ const fullConfig = resolveConfig(tailwindConfig)
 
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `Aymeric Giraudet`,
+    description: `Aymeric Giraudet's personal website.`,
+    author: `@aymericard`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -42,6 +44,13 @@ module.exports = {
             ? [require(`cssnano`)]
             : []),
         ],
+      },
+    },
+    {
+      resolve: `gatsby-source-contentful`,
+      options: {
+        spaceId: process.env.CONTENTFUL_SPACE_ID,
+        accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
       },
     },
   ],
