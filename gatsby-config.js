@@ -20,6 +20,7 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
+    'gatsby-transformer-remark',
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
@@ -40,6 +41,7 @@ module.exports = {
         postCssPlugins: [
           require(`tailwindcss`)(tailwindConfig),
           require(`autoprefixer`),
+          require('postcss-nesting'),
           ...(process.env.NODE_ENV === `production`
             ? [require(`cssnano`)]
             : []),

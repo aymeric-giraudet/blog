@@ -1,19 +1,20 @@
 import React from "react"
-import Img, { FluidObject } from 'gatsby-image'
+import Img, { FixedObject } from 'gatsby-image'
+import { Link } from "gatsby";
 
 interface ArticleCardProps {
   title: string;
   slug: string;
   tags: string[];
   description: { description: string };
-  heroImage: { fluid: FluidObject }
+  heroImage: { fixed: FixedObject }
 }
 
 const ArticleCard: React.FC<ArticleCardProps> = props => (
   <div className="max-w-sm rounded overflow-hidden shadow-lg bg-white m-4">
-  <Img alt="" fluid={props.heroImage.fluid} className="w-full"/>
+  <Img alt="" fixed={props.heroImage.fixed} className="w-full"/>
   <div className="px-6 py-4">
-    <div className="font-bold text-xl mb-2">{props.title}</div>
+    <Link className="font-bold text-xl mb-2" to={`/blog/${props.slug}`}>{props.title}</Link>
     <p className="text-gray-700 text-base">
       {props.description.description}
     </p>

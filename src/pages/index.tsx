@@ -16,8 +16,8 @@ export const pageQuery = graphql`
           title
           tags
           heroImage {
-            fluid(maxWidth: 384, maxHeight: 234, resizingBehavior: SCALE) {
-              ...GatsbyContentfulFluid_tracedSVG
+            fixed(width: 384, height: 234, quality: 85, resizingBehavior: SCALE) {
+              ...GatsbyContentfulFixed_tracedSVG
             }
           }
           description {

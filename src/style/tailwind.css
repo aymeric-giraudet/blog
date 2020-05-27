@@ -1,5 +1,14 @@
 /*! purgecss start ignore */
 @tailwind base;
 @tailwind components;
+
+#article {
+    & h2 {
+        @apply text-2xl;
+    }
+    & p {
+        @apply my-2;
+    }
+}
 /*! purgecss end ignore */
 @tailwind utilities;
