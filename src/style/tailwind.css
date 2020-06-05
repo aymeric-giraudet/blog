@@ -1,14 +1,28 @@
 /*! purgecss start ignore */
+
 @tailwind base;
+
 @tailwind components;
 
 #article {
-    & h2 {
-        @apply text-2xl;
-    }
-    & p {
-        @apply my-2;
-    }
+  & h2 {
+    @apply text-2xl;
+  }
+
+  & h3 {
+    @apply text-xl;
+  }
+
+  & p {
+    @apply my-2;
+  }
+
+  & ul {
+    @apply my-2 px-6 list-disc;
+  }
 }
+
+
 /*! purgecss end ignore */
+
 @tailwind utilities;
