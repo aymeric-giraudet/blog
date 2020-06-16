@@ -16,7 +16,12 @@ export const pageQuery = graphql`
           title
           tags
           heroImage {
-            fixed(width: 384, height: 234, quality: 85, resizingBehavior: SCALE) {
+            fixed(
+              width: 384
+              height: 234
+              quality: 85
+              resizingBehavior: SCALE
+            ) {
               ...GatsbyContentfulFixed_tracedSVG
             }
           }

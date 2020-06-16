@@ -4,24 +4,6 @@
 
 @tailwind components;
 
-#article {
-  & h2 {
-    @apply text-2xl;
-  }
-
-  & h3 {
-    @apply text-xl;
-  }
-
-  & p {
-    @apply my-2;
-  }
-
-  & ul {
-    @apply my-2 px-6 list-disc;
-  }
-}
-
 .gatsby-highlight-code-line {
   background-color: #feb;
   display: block;

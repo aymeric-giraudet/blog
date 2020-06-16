@@ -18,20 +18,20 @@ const Article = ({ data: { contentfulBlogPost: post } }) => (
         },
       ]}
     />
-    <Img
-      style={{
-        /*
+    <article className="max-w-2xl mx-auto">
+      <Img
+        style={{
+          /*
           Ensure golden ratio for the hero size while limiting it to some extend to
           the viewport width
         */
-        height: "61.8vh",
-        maxHeight: "400px",
-      }}
-      alt={post.title}
-      fluid={post.heroImage.fluid}
-    />
-    <div className="px-4">
-      <h1 className="text-4xl underline">{post.title}</h1>
+          height: "61.8vh",
+          maxHeight: "400px",
+        }}
+        alt={post.title}
+        fluid={post.heroImage.fluid}
+      />
+      <h1 className="c-h1">{post.title}</h1>
       <p
         style={{
           display: "block",
@@ -40,13 +40,12 @@ const Article = ({ data: { contentfulBlogPost: post } }) => (
         {post.publishDate}
       </p>
       <div
-        id="article"
-        className="px-4 mt-2"
+        className="c-rich-text"
         dangerouslySetInnerHTML={{
           __html: post.body.childMarkdownRemark.html,
         }}
       />
-    </div>
+    </article>
   </Layout>
 )
 
