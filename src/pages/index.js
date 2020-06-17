@@ -34,12 +34,12 @@ export const pageQuery = graphql`
   }
 `
 
-const IndexPage: React.FC = props => (
+const IndexPage = props => (
   <Layout>
     <SEO title="Home" />
     <div className="flex flex-wrap justify-center">
       {props.data.allContentfulBlogPost.edges.map(({ node }) => (
-        <ArticleCard {...node} />
+        <ArticleCard key={node.id} {...node} />
       ))}
     </div>
   </Layout>

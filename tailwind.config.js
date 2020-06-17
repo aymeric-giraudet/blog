@@ -1,5 +1,5 @@
 module.exports = {
-  purge: ["./src/**/*.tsx"],
+  purge: ["./src/**/*.js"],
   theme: {
     textIndent: {
       // defaults to {}
@@ -47,7 +47,6 @@ module.exports = {
       "stacked-fractions": "stacked-fractions",
     },
     fontVariantLigatures: {
-      // defaults to these values
       normal: "normal",
       none: "none",
       common: "common-ligatures",
@@ -60,14 +59,12 @@ module.exports = {
       "no-contextual": "no-contextual",
     },
     textRendering: {
-      // defaults to these values
       "rendering-auto": "auto",
       "optimize-legibility": "optimizeLegibility",
       "optimize-speed": "optimizeSpeed",
       "geometric-precision": "geometricPrecision",
     },
     textStyles: theme => ({
-      // defaults to {}
       heading: {
         output: false, // this means there won't be a "heading" component in the CSS, but it can be extended
         fontWeight: theme("fontWeight.bold"),

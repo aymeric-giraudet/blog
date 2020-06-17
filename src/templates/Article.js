@@ -18,13 +18,9 @@ const Article = ({ data: { contentfulBlogPost: post } }) => (
         },
       ]}
     />
-    <article className="max-w-2xl mx-auto">
+    <article className="max-w-2xl mx-auto px-5">
       <Img
         style={{
-          /*
-          Ensure golden ratio for the hero size while limiting it to some extend to
-          the viewport width
-        */
           height: "61.8vh",
           maxHeight: "400px",
         }}
