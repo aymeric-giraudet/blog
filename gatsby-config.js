@@ -12,6 +12,8 @@ module.exports = {
     author: `@aymericard`,
   },
   plugins: [
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
@@ -24,14 +26,28 @@ module.exports = {
       resolve: `gatsby-transformer-remark`,
       options: {
         plugins: [
+          `gatsby-remark-reading-time`,
+          {
+            resolve: `gatsby-remark-images-contentful`,
+            options: {
+              // It's important to specify the maxWidth (in pixels) of
+              // the content container as this plugin uses this as the
+              // base for generating different widths of each image.
+              maxWidth: 632,
+              showCaptions: true,
+              linkImagesToOriginal: true,
+            },
+          },
+          {
+            resolve: `gatsby-remark-figure-caption`,
+            options: { figureClassName: "md-figure" },
+          },
           {
             resolve: `gatsby-remark-prismjs`,
           },
         ],
       },
     },
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
