@@ -8,11 +8,6 @@
   @apply italic text-center;
 }
 
-.gatsby-highlight {
-  margin-left: -1.25rem;
-  margin-right: -1.25rem;
-}
-
 .gatsby-highlight-code-line {
   background-color: #474842;
   display: block;
@@ -30,9 +25,16 @@
 .gatsby-highlight {
   background-color: #373832;
   border-radius: 0.3em;
-  margin: 0.5em 0;
+  margin-left: -1.25rem;
+  margin-right: -1.25rem;
   padding: 1em;
   overflow: auto;
+}
+
+@media (max-width: 672px) {
+  .gatsby-highlight {
+    border-radius: 0;
+  }
 }
 
 /**
